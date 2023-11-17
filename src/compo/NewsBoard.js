@@ -5,7 +5,7 @@ const NewsBoard = ({category}) => {
     const [articles,seAms]=useState([])
     useEffect(()=>{
 
-        let url=`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=74a4851c98164875b9711a30f7effdc3`
+        let url=`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=`
         fetch(url).then(resp=>resp.json()).then(data=>seAms(data.articles))
     },[category])
   return (
